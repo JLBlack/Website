@@ -3,3 +3,5 @@
 /pyvenv.cfg
 /db.sqlite3
 *.pyc
+/.vscode/*
+/share/*
