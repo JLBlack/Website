@@ -25,7 +25,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = '(k+j6=zei=_^w!z*0(mkm94crl_knpl(86b(yalcv2#+trv+ro'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'HEROKU_DEPLYOMENT' not in os.environ
+DEBUG = 'HEROKU_DEPLOYMENT' not in os.environ
 
 ALLOWED_HOSTS = [
     'jpnerdbio.com',
