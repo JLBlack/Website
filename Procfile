@@ -1,1 +1,1 @@
-web: uvicorn --host 0.0.0.0 --port "${PORT}" rewind.server:application
+web: uvicorn --host 0.0.0.0 --port "${PORT}" website.asgi:application
