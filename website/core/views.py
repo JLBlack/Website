@@ -12,7 +12,7 @@ class CreditsView(base.TemplateView):
     template_name = "credits.html"
 
 class OnlineView(base.TemplateView):
-    template_name = "findmeonline.html"
+    template_name = "online.html"
 
 class EmploymentView(base.TemplateView):
-    template_name = "workexperience.html"
+    template_name = "employment.html"
