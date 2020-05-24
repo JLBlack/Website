@@ -32,6 +32,11 @@ ALLOWED_HOSTS = [
     'www.jpnerdbio.com',
 ]
 
+if DEBUG:
+    ALLOWED_HOSTS += [
+        "localhost",
+        "127.0.0.1",
+    ]
 
 # Application definition
 
@@ -73,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'website.wsgi.application'
+ASGI_APPLICATION = 'website.asgi.application'
 
 
 # Database

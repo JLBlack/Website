@@ -20,5 +20,9 @@ from website.core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('projects/', views.ProjectsView.as_view()),
+    path('credits/', views.CreditsView.as_view()),
+    path('findmeonline/', views.FindMeOnlineView.as_view()),
+    path('workexperience/', views.WorkExperienceView.as_view()),
     path('', views.HomeView.as_view()),
 ]
