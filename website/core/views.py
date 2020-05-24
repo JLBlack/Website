@@ -11,8 +11,8 @@ class ProjectsView(base.TemplateView):
 class CreditsView(base.TemplateView):
     template_name = "credits.html"
 
-class FindMeOnlineView(base.TemplateView):
+class OnlineView(base.TemplateView):
     template_name = "findmeonline.html"
 
-class WorkExperienceView(base.TemplateView):
+class EmploymentView(base.TemplateView):
     template_name = "workexperience.html"
