@@ -3,11 +3,53 @@
 <html>
     <head>
         <title>JP's Brains</title>
-
+        
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400;700&display=swap" rel="stylesheet"> 
+        
         <style>
             html, body, h1 {
                 margin: 0;
                 padding: 0;
+            }
+
+            a {
+                color: rgb(233, 161, 200);
+            }
+
+            nav  {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                justify-content: space-evenly;
+                font-weight: lighter;
+            }
+
+            header nav a {
+                color: #FAA1FF;
+                flex-grow: 1;
+                background-color: #FFD1DC;
+                margin: 1ex;
+                padding: 0.4ex 1ex;
+                text-align: center;
+                border-radius: 3ex;
+            }
+
+            section > div:nth-child(odd) {
+                background-color: #FFD1DC;
+}
+
+            nav li {
+                list-style: none;
+                display: inline-block;
+            }
+
+            p  {
+                text-align: center;
+            }
+
+            body {
+                font-family: Heebo, sans-serif;
+                background-color: #FFF1EF;
             }
 
             h1 {
@@ -21,6 +63,15 @@
     <body>
         <section>
             <header>
+                <nav>
+                    <ul>
+                        <li><a href="https://github.com/JLBlack">GitHub</a></li>
+                        <li><a href="/credits/">Credits</a></li>
+                        <li><a href="/employment/">Work Experience</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/online/">Find Me Online</a></li>
+                    </ul>
+                </nav>
                
             </header>
 
