@@ -20,6 +20,7 @@ from website.core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', views.HomeView.as_view()),
     path('projects/', views.ProjectsView.as_view()),
     path('credits/', views.CreditsView.as_view()),
     path('online/', views.OnlineView.as_view()),
