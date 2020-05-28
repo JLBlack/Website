@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html>
@@ -12,33 +14,58 @@
                 padding: 0;
             }
 
+            body {
+                -webkit-transition: background-image 750ms ease-in;
+                -o-transition: background-image 750ms ease-in;
+                transition: background-image 750ms ease-in;
+            }
+
             a {
                 color: rgb(233, 161, 200);
             }
 
-            nav  {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                justify-content: space-evenly;
+            nav ul {
+                margin: 0 auto;
+                display: inline-block;
+            }
+
+            header nav {
+                text-align: center;
+            }
+
+            header nav ul {
+                margin: 1ex;
                 font-weight: lighter;
             }
 
-            header nav a {
-                color: #111111;
+            header nav a:link,
+            header nav a:active,
+            header nav a:hover,
+            header nav a:visited {
+                display: inline-block;
+                color: #000;
                 flex-grow: 1;
                 background-color: #FFD1DC;
                 margin: 1ex;
                 padding: 0.4ex 1ex;
                 text-align: center;
-                border-radius: 3ex;
+                border-radius: 1ex;
+                text-decoration: none;
+                -webkit-transition: background-color 300ms ease-in, color 300ms ease-in;
+                -o-transition: background-color 300ms ease-in, color 300ms ease-i;
+                transition: background-color 300ms ease-in, color 300ms ease-i;
+            }
+
+            header nav a:hover {
+                color: #FAA1CC;
+                background-color: #FFF;
             }
 
             section > div:nth-child(odd) {
                 background-color: #FFD1DC;
-}
+            }
 
-            nav li {
+            header nav li {
                 list-style: none;
                 display: inline-block;
             }
@@ -57,6 +84,24 @@
                 color: #323232;
                 text-align: center;
             }
+
+            #magic-button {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;   
+                border-radius: 50%;  
+                border: 0;
+                background-color: transparent;
+                font-size: 3em;
+                opacity: 0;
+            }
+
+            #magic-button:hover {
+                opacity: 0.8;
+                -webkit-transition: opacity 300ms ease-in, color 300ms ease-in;
+                -o-transition: opacity 300ms ease-in, color 300ms ease-i;
+                transition: opacity 300ms ease-in, color 300ms ease-i;
+            }
         </style>
     </head>
 
@@ -65,7 +110,7 @@
             <header>
                 <nav>
                     <ul>
-                        <li><a href="/home/">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/credits/">Credits</a></li>
                         <li><a href="/employment/">Work Experience</a></li>
                         <li><a href="/projects/">Projects</a></li>
@@ -76,6 +121,23 @@
             </header>
 
             <main>{% block main %}{% endblock main %}</main>
+
+            <footer>
+                <button id='magic-button'>🍩</button>
+            </footer>
         </section>
+
+        <script>
+            const button = document.getElementById('magic-button');
+            const initialBackgroundImage = document.body.style.backgroundImage;
+            // console.log("A THING");
+            button.addEventListener('click', function () {
+                if (document.body.style.backgroundImage === initialBackgroundImage) {
+                    document.body.style.backgroundImage = 'url("{% static "cereal.jpg" %}")';
+                } else {
+                    document.body.style.backgroundImage = initialBackgroundImage;
+                }
+            }, false);
+        </script>
     </body>
 </html>
