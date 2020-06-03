@@ -92,18 +92,27 @@
                 text-align: center;
             }
 
-            #magic-button {
+            .magic-button {
                 position: absolute;
-                right: 10px;
-                top: 10px;   
-                border-radius: 50%;  
                 border: 0;
                 background-color: transparent;
                 font-size: 3em;
                 opacity: 0;
             }
 
-            #magic-button:hover {
+            .magic-button.donut {
+                right: 10px;
+                top: 10px;   
+                border-radius: 50%;  
+            }
+
+            .magic-button.cookie {
+                left: 10px;
+                top: 10px;
+                border-radius: 50%;
+            }
+
+            .magic-button:hover {
                 opacity: 0.8;
                 -webkit-transition: opacity 300ms ease-in, color 300ms ease-in;
                 -o-transition: opacity 300ms ease-in, color 300ms ease-i;
@@ -130,21 +139,24 @@
             <main>{% block main %}{% endblock main %}</main>
 
             <footer>
-                <button id='magic-button'>🍩</button>
+                <button class='magic-button donut'>🍩</button>
+                <button class='magic-button cookie'>🍪</button>
             </footer>
         </section>
 
         <script>
-            const button = document.getElementById('magic-button');
+            const button = document.getElementsByClassName('magic-button');
             const initialBackgroundImage = document.body.style.backgroundImage;
             // console.log("A THING");
-            button.addEventListener('click', function () {
-                if (document.body.style.backgroundImage === initialBackgroundImage) {
-                    document.body.style.backgroundImage = 'url("{% static "lucky.jpg" %}")';
-                } else {
-                    document.body.style.backgroundImage = initialBackgroundImage;
-                }
-            }, false);
+            Array.from(button).forEach(function (button) {
+                button.addEventListener('click', function () {
+                    if (document.body.style.backgroundImage === initialBackgroundImage) {
+                        document.body.style.backgroundImage = 'url("{% static "lucky.jpg" %}")';
+                    } else {
+                        document.body.style.backgroundImage = initialBackgroundImage;
+                    }
+                }, false);
+            });
         </script>
     </body>
 </html>
