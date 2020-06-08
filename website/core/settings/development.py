@@ -2,6 +2,10 @@ from website.core.settings.defaults import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 ALLOWED_HOSTS = [
     "localhost",
