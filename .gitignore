@@ -1,7 +1,7 @@
 /lib/*
 /bin/*
 /pyvenv.cfg
-/db.sqlite3
-*.pyc
 /.vscode/*
 /share/*
+*.pyc
+*.sqlite3
