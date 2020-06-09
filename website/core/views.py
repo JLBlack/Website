@@ -16,3 +16,6 @@ class OnlineView(base.TemplateView):
 
 class EmploymentView(base.TemplateView):
     template_name = "employment.html"
+
+class CookieView(base.TemplateView):
+    template_name = "cookie.html"

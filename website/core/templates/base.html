@@ -110,6 +110,7 @@
                 left: 10px;
                 top: 10px;
                 border-radius: 50%;
+                text-decoration: none;
             }
 
             .magic-button:hover {
@@ -138,14 +139,12 @@
 
             <main>{% block main %}{% endblock main %}</main>
 
-            <footer>
-                <button class='magic-button donut'>🍩</button>
-                <button class='magic-button cookie'>🍪</button>
-            </footer>
+            <button class='magic-button donut'>🍩</button>
+            <a href="/cookie/" class='magic-button cookie'>🍪</a>
         </section>
 
         <script>
-            const button = document.getElementsByClassName('magic-button');
+            const button = document.getElementsByClassName('donut');
             const initialBackgroundImage = document.body.style.backgroundImage;
             // console.log("A THING");
             Array.from(button).forEach(function (button) {

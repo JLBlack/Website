@@ -24,5 +24,6 @@ urlpatterns = [
     path('credits/', views.CreditsView.as_view()),
     path('online/', views.OnlineView.as_view()),
     path('employment/', views.EmploymentView.as_view()),
+    path('cookie/', views.CookieView.as_view()),
     path('', views.HomeView.as_view()),
 ]
