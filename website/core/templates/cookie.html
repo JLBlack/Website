@@ -3,28 +3,290 @@
 {% block styles %}{% endblock styles %}
 
 {% block main %}
-  <head>
-    <title>XP.css example</title>
-    <meta charset="UTF-8" />
-    // Windows XP Theme (include only one theme at a time)
-    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
-    // Windows 98 Theme (include only one theme at a time)
-    <link rel="stylesheet" href="https://unpkg.com/xp.css@0.2.3/dist/98.css" />
-  </head>
 
-  <body>
-    <div class="window" style="margin: 32px; width: 250px">
-      <div class="title-bar">
-        <div class="title-bar-text">
-          My First Program
+<style>
+body {
+    background-color: #ECE9D8;
+}
+</style>
+
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+
+    <ul class="tree-view">
+        <li>Table of Contents</li>
+        <li>What is web development?</li>
+        <li>
+          CSS
+          <ul>
+            <li>Selectors</li>
+            <li>Specificity</li>
+            <li>Properties</li>
+          </ul>
+        </li>
+        <li>
+          <details open>
+            <summary>JavaScript</summary>
+            <ul>
+              <li>Avoid at all costs</li>
+              <li>
+                <details>
+                  <summary>Unless</summary>
+                  <ul>
+                    <li>Avoid</li>
+                    <li>
+                      <details>
+                        <summary>At</summary>
+                        <ul>
+                          <li>Avoid</li>
+                          <li>At</li>
+                          <li>All</li>
+                          <li>Cost</li>
+                        </ul>
+                      </details>
+                    </li>
+                    <li>All</li>
+                    <li>Cost</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>HTML</li>
+        <li>Special Thanks</li>
+      </ul>
+
+    <div class="window" style="width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">Deadly Virus Detected!</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p>Cookie Munster Virus detected. Quick! Answer the
+             following questions quickly before it devours all 
+             your delicious data cookies, or say goodbye to your
+             computer data. Hurry before it gets to the end of
+             the page!
+          </p>
         </div>
       </div>
-      <div class="window-body">
-        <p>Hello, world!</p>
+
+      <p>Hack The Planet?</p>
+      <div class="field-row">
+        <input id="radio5" type="radio" name="first-example">
+        <label for="radio5">Yes</label>
+      </div>
+      <div class="field-row">
+        <input id="radio6" type="radio" name="first-example">
+        <label for="radio6">No</label>
+      </div>
+
+      <p>Which Pill?</p>
+      <div class="field-row">
+        <input id="radio5" type="radio" name="first-example">
+        <label for="radio5">Red</label>
+      </div>
+      <div class="field-row">
+        <input id="radio6" type="radio" name="first-example">
+        <label for="radio6">Blue</label>
+      </div>
+
+      <p>Me Want Cookie?</p>
+      <div class="field-row">
+        <input id="radio5" type="radio" name="first-example">
+        <label for="radio5">Yes</label>
+      </div>
+      <div class="field-row">
+        <input id="radio6" type="radio" name="first-example">
+        <label for="radio6">No</label>
+      </div>
+
+    <p>What does Cookie Munster want?</p>
+      <select>
+        <option>5 - World Peace</option>
+        <option>4 - Cheese</option>
+        <option selected>3 - Cookies!</option>
+        <option>2 - Cats</option>
+        <option>1 - Toothbrush</option>
+      </select>
+      <p>What are they trashing?</p>
+      <select>
+        <option>5 - The Earth!</option>
+        <option>4 - Homeroom!</option>
+        <option selected>3 - Our Rights!</option>
+        <option>2 - IDK I'm Not A Racoon!</option>
+        <option>1 - Toothbrush</option>
+      </select>
+      <p>Zero is...?</p>
+      <select>
+        <option>5 - So Hot</option>
+        <option>4 - Great</option>
+        <option selected>3 - C00L</option>
+        <option>2 - Not so great</option>
+        <option>1 - Toothbrush</option>
+      </select>
+      <p>Joey is NOT...?</p>
+      <select>
+        <option>5 - Smart</option>
+        <option>4 - Dr. Doom</option>
+        <option selected>3 - Addicted To My Computer!</option>
+        <option>2 - A Smoker</option>
+        <option>1 - Toothbrush</option>
+      </select>
+      <p>Crash and...?</p>
+      <select>
+        <option>5 - Slide</option>
+        <option>4 - Die</option>
+        <option selected>3 - Burn!</option>
+        <option>2 - Total your car</option>
+        <option>1 - Toothbrush</option>
+      </select>
+
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Command Prompt</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <pre>Microsoft&#10094;R&#10095; Windows DOS 
+      &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
+            <br>C:&#92;WINDOWS&#92;SYSTEM32> __Only the ELITE can beat this virus__
+          </pre>
+        </div>
+      </div>
+
+   <p>Crank it to?</p>
+   <div class="field-row" style="width: 300px">
+    <label for="range25">Volume:</label>
+    <label for="range26">0</label>
+    <input id="range26" type="range" min="1" max="11" value="5" />
+    <label for="range27">11</label>
+  </div>
+
+<p>Which version of Windows appears to be running?</p>
+  <fieldset>
+    <div class="field-row">Select one:</div>
+    <div class="field-row">
+      <input id="radio14" type="radio" name="fieldset-example">
+      <label for="radio14">XP</label>
+    </div>
+    <div class="field-row">
+      <input id="radio15" type="radio" name="fieldset-example">
+      <label for="radio15">11</label>
+    </div>
+    <div class="field-row">
+      <input id="radio16" type="radio" name="fieldset-example">
+      <label for="radio16">98</label>
+    </div>
+  </fieldset>
+
+<p>Lord</p>
+  <fieldset>
+    <div class="field-row">Select one:</div>
+    <div class="field-row">
+      <input id="radio14" type="radio" name="fieldset-example">
+      <label for="radio14">Canon</label>
+    </div>
+    <div class="field-row">
+      <input id="radio15" type="radio" name="fieldset-example">
+      <label for="radio15">Kodak</label>
+    </div>
+    <div class="field-row">
+      <input id="radio16" type="radio" name="fieldset-example">
+      <label for="radio16">Nikon</label>
+    </div>
+  </fieldset>
+
+<p>Razor and</p>
+  <fieldset>
+    <div class="field-row">Select one:</div>
+    <div class="field-row">
+      <input id="radio14" type="radio" name="fieldset-example">
+      <label for="radio14">Knife</label>
+    </div>
+    <div class="field-row">
+      <input id="radio15" type="radio" name="fieldset-example">
+      <label for="radio15">Blade</label>
+    </div>
+    <div class="field-row">
+      <input id="radio16" type="radio" name="fieldset-example">
+      <label for="radio16">Sword</label>
+    </div>
+  </fieldset>
+
+  <div class="field-row">
+    <label for="text21">Mess with the best:</label>
+    <input id="text21" type="text" />
+  </div>
+
+  <button>I Am Useless</button>
+
+  <div class="window" style="width: 400px">
+    <div class="title-bar">
+      <div class="title-bar-text">A Window With Tabs and Groups</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
       </div>
     </div>
-  </body>
+    <div class="window-body">
+      <menu role="tablist">
+        <button aria-selected="true" aria-controls="music">Music</button>
+        <button aria-controls="dogs">Dogs</button>
+        <button aria-controls="food">Movie</button>
+      </menu>
+      <article role="tabpanel" id="music">
+          <p>Set your listening preferences</p>
+          <fieldset>
+            <legend>Today's mood</legend>
+            <div class="field-row">
+              <input id="radio29" type="radio" name="fieldset-example2">
+              <label for="radio29">The Prodigy</label>
+            </div>
+            <div class="field-row">
+              <input id="radio30" type="radio" name="fieldset-example2">
+              <label for="radio30">Moby</label>
+            </div>
+            <div class="field-row">
+              <input id="radio31" type="radio" name="fieldset-example2">
+              <label for="radio31">The Crystal Method</label>
+            </div>
+            <div class="field-row">
+              <input id="radio32" type="radio" name="fieldset-example2">
+              <label for="radio32">Orbital</label>
+            </div>
+          </fieldset>
+          <section class="field-row">
+            <button>Reset Alarm...</button>
+            <label>Songs to code to.</label>
+          </section>
+        </article>
+  
+      <article role="tabpanel" hidden id="dogs">
+        <img style="width: 100%" src="alphadog.jpg" />
+      </article>
+  
+      <article role="tabpanel" hidden id="movie">
+        <p>
+          You create the content for each tab by using an <code>article</code> tag.
+        </p>
+        <iframe width="100%" height="200" src="https://youtu.be/Bmz67ErIRa4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </article>
+      <section class="field-row" style="justify-content: flex-end">
+        <button>OK</button>
+        <button>Cancel</button>
+      </section>
+    </div>
+  </div>
 
-<h1>Cookie Monster</h1>
 <p>Cookie game</p>
 {% endblock main %}
