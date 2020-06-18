@@ -23,7 +23,13 @@
     margin-right: 0.4ex;
   }
 
-  ul.tree-view {
+header {
+  font-style: normal;
+  font-size: large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+  sidebar {
     font-family: "Pixelated MS Sans Serif",Arial;
     font-size: 11px;
     display: block;
@@ -62,52 +68,19 @@
 {% endblock extra_styles %}
 
 {% block main %}
+<header>Cookie Game</header>
 <section>
   <div>
-    <ul class="tree-view">
-        <li>Table of Contents</li>
-        <li>What is web development?</li>
-        <li>
-          CSS
-          <ul>
-            <li>Selectors</li>
-            <li>Specificity</li>
-            <li>Properties</li>
-          </ul>
-        </li>
-        <li>
-          <details open>
-            <summary>JavaScript</summary>
-            <ul>
-              <li>Avoid at all costs</li>
-              <li>
-                <details>
-                  <summary>Unless</summary>
-                  <ul>
-                    <li>Avoid</li>
-                    <li>
-                      <details>
-                        <summary>At</summary>
-                        <ul>
-                          <li>Avoid</li>
-                          <li>At</li>
-                          <li>All</li>
-                          <li>Cost</li>
-                        </ul>
-                      </details>
-                    </li>
-                    <li>All</li>
-                    <li>Cost</li>
-                  </ul>
-                </details>
-              </li>
-            </ul>
-          </details>
-        </li>
-        <li>HTML</li>
-        <li>Special Thanks</li>
+    <sidebar>
+      <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/credits/">Credits</a></li>
+          <li><a href="/employment/">Work Experience</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/online/">Find Me Online</a></li>
       </ul>
-    </div>
+    </sidebar>
+  </div>
 
     <div>
     <div class="window" style="width: 300px">
@@ -201,7 +174,7 @@
       </select>
 
 
-      <nav>
+      
       <div class="window">
         <div class="title-bar">
           <div class="title-bar-text">Command Prompt</div>
@@ -218,7 +191,6 @@
           </pre>
         </div>
       </div>
-</nav>
 
    <p>Crank it to?</p>
    <div class="field-row" style="width: 300px">
@@ -298,7 +270,7 @@
     <div class="window-body">
       <menu role="tablist">
         <button aria-selected="true" aria-controls="music">Music</button>
-        <button aria-controls="dogs">Dogs</button>
+        <button aria-controls="dogs">Dogs</button> 
         <button aria-controls="food">Movie</button>
       </menu>
       <article role="tabpanel" id="music">
@@ -346,6 +318,21 @@
   </div>
 </div>
 
-<p>Cookie game</p>
 </section>
 {% endblock main %}
+
+ (e) => {
+  e.preventDefault();
+
+  tabButtons.forEach((button) => {
+    if (
+      button.getAttribute("aria-controls") ===
+      e.target.getAttribute("aria-controls")
+    ) {
+      button.setAttribute("aria-selected", true);
+      openTab(e, tab);
+    } else {
+      button.setAttribute("aria-selected", false);
+    }
+  });
+}
