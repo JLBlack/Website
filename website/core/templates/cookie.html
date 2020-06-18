@@ -1,59 +1,69 @@
 {% extends "base.html" %}
 
-{% block styles %}{% endblock styles %}
+{% block primary_navigation %}{% endblock primary_navigation %}
+{% block main_class %}class="winxp"{% endblock main_class %}
 
-{% block main %}
-<html> scroll
-<body class="surface" ontouchstart="">
-  <aside> flex 
-    <ul class=treeview">
-      <li>
-        ::maker
-        <a herf="#intro">Intro</a>
-      </li>
-      <li>
-        ::maker
-        <a href="#components">Compopnents</a>
-      </li>
-      <style>
-      <ul.treeview{
-      border: 1px solid #7f9db9;
-      padding: 2px 5px;}
+{% block extra_styles %}
+<style>main.winxp > section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
-      ul.tree-view {
+  main.winxp > section > *:nth-child(1) {
+    width: 14vw;
+    background-color: inherit;
+  }
+
+  main.winxp > section > *:nth-child(1) > .tree-view {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 0.5ex);
+    margin-right: 0.4ex;
+  }
+
+  ul.tree-view {
     font-family: "Pixelated MS Sans Serif",Arial;
     font-size: 11px;
     display: block;
     background: #fff;
     padding: 6px;
     margin: 0;
-}
-      </style>
-      <ul>
-        <li>
-          
-        </li>
-      </ul>
-<style>
-body {
-    background-color: #ECE9D8;
-}
-</style>
+  }
 
-    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
-<style>
+  body {
+      background-color: #ECE9D8;
+  }
+
+  p {
+      text-align: initial;
+  }
+
   aside {
     width: 200px;
-position: fixed;
-top: 0;
-bottom: 0;
-padding: 8px;
-display: flex;
-align-items: stretch;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 8px;
+    display: flex;
+    align-items: stretch;
   }
-  
-  </style>
 
+  nav {
+    margin: 16px 0;
+    padding: 24px 24px;
+    border-left: 1px solid #808080;
+    width: 50%;
+  }
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/xp.css" />
+{% endblock extra_styles %}
+
+{% block main %}
+<section>
+  <div>
     <ul class="tree-view">
         <li>Table of Contents</li>
         <li>What is web development?</li>
@@ -97,17 +107,9 @@ align-items: stretch;
         <li>HTML</li>
         <li>Special Thanks</li>
       </ul>
-    
+    </div>
 
-<style>
-  nav {
-    margin: 16px 0;
-padding: 24px 24px;
-border-left: 1px solid #808080;
-width: 300%;
-  }
-</style>
-<nav>
+    <div>
     <div class="window" style="width: 300px">
         <div class="title-bar">
           <div class="title-bar-text">Deadly Virus Detected!</div>
@@ -126,7 +128,7 @@ width: 300%;
           </p>
         </div>
       </div>
-</nav>
+
       <p>Hack The Planet?</p>
       <div class="field-row">
         <input id="radio5" type="radio" name="first-example">
@@ -157,7 +159,7 @@ width: 300%;
         <label for="radio6">No</label>
       </div>
 
-    <p>What does Cookie Munster want?</p>
+      <p>What does Cookie Munster want?</p>
       <select>
         <option>5 - World Peace</option>
         <option>4 - Cheese</option>
@@ -260,7 +262,7 @@ width: 300%;
     </div>
   </fieldset>
 
-<p>Razor and</p>
+  <p>Razor and</p>
   <fieldset>
     <div class="field-row">Select one:</div>
     <div class="field-row">
@@ -284,7 +286,6 @@ width: 300%;
 
   <button>I Am Useless</button>
 
-  <nav>
   <div class="window" style="width: 400px">
     <div class="title-bar">
       <div class="title-bar-text">A Window With Tabs and Groups</div>
@@ -343,7 +344,8 @@ width: 300%;
       </section>
     </div>
   </div>
-</nav>
+</div>
 
 <p>Cookie game</p>
+</section>
 {% endblock main %}

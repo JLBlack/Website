@@ -21,13 +21,6 @@
                 transition: background-image 750ms ease-in;
             }
 
-            <div style="background-image:url(lucky.jpg);
-            width:220px;
-            height:140px;
-            color:black;
-            font-size:18px;
-            /div>
-
             a {
                 color: rgb(233, 161, 200);
             }
@@ -123,6 +116,8 @@
         </style>
         {% endblock styles %}
 
+        {% block extra_styles %}{% endblock extra_styles %}
+
         {% block extra_head %}
         {% endblock extra_head %}
     </head>
@@ -130,6 +125,7 @@
     <body>
         <section>
             <header>
+                {% block primary_navigation %}
                 <nav>
                     <ul>
                         <li><a href="/">Home</a></li>
@@ -139,10 +135,12 @@
                         <li><a href="/online/">Find Me Online</a></li>
                     </ul>
                 </nav>
-               
+                {% endblock primary_navigation %}
             </header>
 
-            <main>{% block main %}{% endblock main %}</main>
+            <main {% block main_class %}{% endblock main_class %}>
+                {% block main %}{% endblock main %}
+            </main>
 
             <button class='magic-button donut'>🍩</button>
             <a href="/cookie/" class='magic-button cookie'>🍪</a>
