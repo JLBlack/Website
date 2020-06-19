@@ -1,11 +1,28 @@
 {% extends "base.html" %}
-
+{% block extra_styles %}
+{% block body %}
+<style>
+   links {
+      font: bold;
+      font-style: inherit;
+      font-size: larger;
+      text-align: center;
+      margin-left: 300px;
+}
+</style>
+{% endblock body %}
+{% endblock extra_styles %}
 {% block main %}
 
 <h1>Links to find me online</h1>
 
-<p>Aside from my Github, you can find me and my work online at the 
+<p>Here is where you can find me and my work online at the 
    following links listed on this page. 
 </p>
 
+   <body>
+      <links>
+         <a href="https://github.com/JLBlack">Github</a>
+      </links>
+   </body>
 {% endblock main %}
