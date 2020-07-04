@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block primary_navigation %}{% endblock primary_navigation %}
+
+{% block main %}
+
+{% block extra_styles %}
+<style>
+body {
+    background-color: #f0e68c;
+  }
+
+border {
+    border-color: #ff0000;
+    border-style: solid;
+    }
+
+header {
+    font-family: sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    }
+
+p {
+    border-style: solid;
+    border-color: #ff0000;
+    border-radius: 3px;
+    text-align: center;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: larger;
+}
+
+main {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+</style>
+{% endblock extra_styles %}
+
+<header>欢迎 Huānyíng!</header>
+
+<!--Here you will find links to my various projects,
+    accreditations, and extrenal links online. Also 
+    where you can find out more about me elsewhere on 
+    the weberverse! I'm currently studying and building 
+    my skill set so check back for updates as I progress.-->
+
+<!--Here you can read my web page in mandarin and pinyin. You can 
+    also play a game I made to study both chinese characters 
+    and pinyin. The game is at the bottom. Enjoy!-->
+<p>
+    <section></section>
+        在这里您可以阅读我的普通话和拼音网页.
+        您可以也玩我学习两个汉字的游戏和拼音.
+        游戏在最底层. 请享用！
+    </section>
+
+    <main> 
+        Zài zhèlǐ nín kěyǐ yuèdú wǒ de pǔtōnghuà hé pīnyīn wǎngyè.
+        Nín kěyǐ yě wán wǒ xuéxí liǎng gè hànzì de yóuxì hé pīnyīn.
+        Yóuxì zài zuì dǐcéng. Qǐng xiǎngyòng!
+    </main>   
+</p>
+
+{% endblock main %}

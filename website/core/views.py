@@ -19,3 +19,6 @@ class EmploymentView(base.TemplateView):
 
 class CookieView(base.TemplateView):
     template_name = "cookie.html"
+
+class ChineseView(base.TemplateView):
+    template_name = "chinese.html"

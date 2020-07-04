@@ -25,5 +25,6 @@ urlpatterns = [
     path('online/', views.OnlineView.as_view()),
     path('employment/', views.EmploymentView.as_view()),
     path('cookie/', views.CookieView.as_view()),
+    path('china/', views.ChineseView.as_view()),
     path('', views.HomeView.as_view()),
 ]

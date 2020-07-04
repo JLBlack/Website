@@ -22,7 +22,7 @@
             }
 
             a {
-                color: rgb(233, 161, 200);
+                color: #39ff14;
             }
 
             nav ul {
@@ -36,7 +36,7 @@
 
             header nav ul {
                 margin: 1ex;
-                font-weight: lighter;
+                font-weight: bold;
             }
 
             header nav a:link,
@@ -46,7 +46,7 @@
                 display: inline-block;
                 color: #000;
                 flex-grow: 1;
-                background-color: #FFD1DC;
+                background-color: #39ff14;
                 margin: 1ex;
                 padding: 0.4ex 1ex;
                 text-align: center;
@@ -58,12 +58,13 @@
             }
 
             header nav a:hover {
-                color: #FAA1CC;
-                background-color: #FFF;
+                color: #39ff14;
+                background-color: #000;
+                
             }
 
             section > div:nth-child(odd) {
-                background-color: #FFD1DC;
+                background-color: #39ff14;
             }
 
             header nav li {
@@ -73,16 +74,16 @@
 
             p  {
                 text-align: center;
+                color: #39ff14
             }
 
             body {
                 font-family: Heebo, sans-serif;
-                background-color: #FFF1EF;
+                background-color: #111;
             }
 
             h1 {
-                background-color: #FFD1DC;
-                color: #323232;
+                color: #39ff14;
                 text-align: center;
             }
 
@@ -103,6 +104,13 @@
             .magic-button.cookie {
                 left: 10px;
                 top: 10px;
+                border-radius: 50%;
+                text-decoration: none;
+            }
+
+            .magic-button.china {
+                right: 70px;
+                top: 6px;
                 border-radius: 50%;
                 text-decoration: none;
             }
@@ -144,6 +152,7 @@
 
             <button class='magic-button donut'>🍩</button>
             <a href="/cookie/" class='magic-button cookie'>🍪</a>
+            <a href="/china/" class='magic-button china'>🥡</a>
         </section>
 
         <script>
