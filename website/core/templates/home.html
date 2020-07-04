@@ -2,11 +2,26 @@
 {% extends "base.html" %}
 
 {% block main %}
-
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/xp.css@/dist/98.css"
->
+{% block extra_styles %}
+<style>
+.title-bar {
+    font-family: Trebuchet MS;
+    background: linear-gradient(180deg,#39ff14,#39ee14 8%,#39dd14 40%,#39cc14 88%,#39aa14 93%,#39ff14 95%,#39aa13 96%,#33aa77);
+    padding: 3px 5px 3px 3px;
+    border-top: 1px solid #39ff14;
+    border-left: 1px solid #39ff14;
+    border-right: 1px solid #39ff14;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 8px;
+    font-size: 13px;
+    text-shadow: 1px 1px #0f1089;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/xp.css" />
+{% endblock extra_styles %}
 
 <h1>Welcome to JP's BioWorld</h1>
 
@@ -19,20 +34,16 @@
             <button aria-label="Maximize"></button>
             <button aria-label="Close"></button>
           </div>
-        </div>
         <div class="window-body">
-          <pre>Microsoft&#10094;R&#10095; Windows DOS 
-      &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
-            <br>C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line easily with a window and pre tag
-          
+    </div>
+         
+    <main>
     Here you will find links to my various projects,
     accreditations, and extrenal links online. Also 
     where you can find out more about me elsewhere on 
     the weberverse! I'm currently studying and building 
-    my skill set so check back for updates as I progress. >
-</pre>
-</div>
-</div>
+    my skill set so check back for updates as I progress. 
+</main>
 </p>
 
 {% endblock main %}
