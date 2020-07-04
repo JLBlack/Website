@@ -115,19 +115,19 @@ section {
     also play a game I made to study both chinese characters 
     and pinyin. The game is at the bottom. Enjoy!-->
 <p>
-    <section></section>
+    <section>
         在这里您可以阅读我的普通话和拼音网页.
         您可以也玩我学习两个汉字的游戏和拼音.
         游戏在最底层. 请享用！
     </section>
 
-    <main> 
+    <section> 
         Zài zhèlǐ nín kěyǐ yuèdú wǒ de pǔtōnghuà hé pīnyīn wǎngyè.
         Nín kěyǐ yě wán wǒ xuéxí liǎng gè hànzì de yóuxì hé pīnyīn.
         Yóuxì zài zuì dǐcéng. Qǐng xiǎngyòng!
-    </main>   
+    </section>   
 </p>
-
+<main>
 <a class="trigger_popup_fricc">Click here to show the popup</a>
 
 <div class="hover_bkgr_fricc">
@@ -137,7 +137,9 @@ section {
         <p>Add any HTML content<br />inside the popup box!</p>
     </div>
 </div>
-
+</main>
+<body>
+<script>
 $(window).load(function () {
     $(".trigger_popup_fricc").click(function(){
        $('.hover_bkgr_fricc').show();
@@ -149,6 +151,7 @@ $(window).load(function () {
         $('.hover_bkgr_fricc').hide();
     });
 });
-
+</script>
+</body>
 
 {% endblock main %}
