@@ -4,46 +4,98 @@
 {% block main %}
 {% block extra_styles %}
 <style>
-.title-bar {
-    font-family: Trebuchet MS;
-    background: linear-gradient(180deg,#39ff14,#39ee14 8%,#39dd14 40%,#39cc14 88%,#39aa14 93%,#39ff14 95%,#39aa13 96%,#33aa77);
-    padding: 3px 5px 3px 3px;
-    border-top: 1px solid #39ff14;
-    border-left: 1px solid #39ff14;
-    border-right: 1px solid #39ff14;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 8px;
-    font-size: 13px;
-    text-shadow: 1px 1px #0f1089;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.decoration {
+  margin: 0 auto;
+  max-width: 80%;
+  background-color: #CECECE;
+  color: #000;
+  font-family: inherit;
+  border: 3px solid #CECECE;
+}
+
+.decoration .titlebar {
+  font-size: 0.8em;
+  background: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    color-stop(5%, #CECECE),
+    color-stop(85%, #9ABE9A)
+  );
+  background: -o-linear-gradient(
+    top,
+    #CECECE 5%,
+    #9ABE9A 85%
+  );
+  background: linear-gradient(
+    180deg,
+    #CECECE 5%,
+    #9ABE9A 85%
+  );
+}
+
+.terminal {
+  margin: 0;
+  background-color: #000;
+  color: #CECECE;
+  text-align: left;
+  padding: 1ex;
+}
+
+.terminal input {
+  border: 0;
+  background-color: transparent;
+  color: #CECECE;
+  width: 100%;
+  height: 400px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+main {
+  color: #39ff14;
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 30px;
 }
 </style>
-<link rel="stylesheet" href="https://unpkg.com/xp.css" />
+
+
 {% endblock extra_styles %}
 
 <h1>Welcome to JP's BioWorld</h1>
 
-<p>
-    <div class="window">
-        <div class="title-bar">
-          <div class="title-bar-text">Command Prompt</div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+          <main>
+            Here you will find links to my various projects,
+            accreditations, and extrenal links online. Also 
+            where you can find out more about me elsewhere on 
+            the weberverse! I'm currently studying and building 
+            my skill set so check back for updates as I progress. 
+        </main>
+        
+        <div class=decoration>
+          <div class=titlebar>
+            Collective Terminal
           </div>
-        <div class="window-body">
-    </div>
+          
+        <pre class=terminal>
+-->
+$ ls
+jpnerd
+-->
+        <input type=text />
+          </pre>
+        </div>
          
-    <main>
-    Here you will find links to my various projects,
-    accreditations, and extrenal links online. Also 
-    where you can find out more about me elsewhere on 
-    the weberverse! I'm currently studying and building 
-    my skill set so check back for updates as I progress. 
-</main>
+    
 </p>
 
 {% endblock main %}
