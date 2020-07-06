@@ -4,13 +4,6 @@
 {% block main %}
 {% block extra_styles %}
 <style>
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 * { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .decoration {
@@ -24,6 +17,7 @@
 
 .decoration .titlebar {
   font-size: 0.8em;
+  text-shadow: 0px 0px 3px #FFF;
   background: -webkit-gradient(
     linear,
     left top, left bottom,
@@ -45,17 +39,31 @@
 .terminal {
   margin: 0;
   background-color: #000;
-  color: #CECECE;
+  letter-spacing: 0.3ex;
+  color: #39FF14;
+  text-shadow: 0px 0px 3px #39FF14;
   text-align: left;
+  height: 400px;
   padding: 1ex;
 }
 
+.terminal-input-area {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+}
+
 .terminal input {
+  display: inline-block;
+  flex-grow: 1;
   border: 0;
   background-color: transparent;
-  color: #CECECE;
-  width: 100%;
-  height: 400px;
+  letter-spacing: 0.3ex;
+  color: #39FF14;
+  text-shadow: 0px 0px 3px #39FF14;
+  height: auto;
+  max-width: 100%;
+  min-height: 1em;
   font-family: inherit;
   font-size: inherit;
 }
@@ -65,9 +73,19 @@ main {
   text-align: center;
   padding: 5px;
   padding-bottom: 30px;
+  text-shadow: 0px 0px 1px #39aa11;
+}
+
+h1 {
+  color: #39ff14;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 5ex;;
+  padding: 5px;
+  padding-bottom: 20px;
+  text-shadow: 0px 0px 4px #77ff77;
 }
 </style>
-
 
 {% endblock extra_styles %}
 
@@ -79,7 +97,7 @@ main {
             where you can find out more about me elsewhere on 
             the weberverse! I'm currently studying and building 
             my skill set so check back for updates as I progress. 
-        </main>
+          </main>
         
         <div class=decoration>
           <div class=titlebar>
@@ -91,11 +109,22 @@ main {
 $ ls
 jpnerd
 -->
-        <input type=text />
+<div class=terminal-input-area>
+<span>~ $</span><input autofocus />
+</div>
           </pre>
         </div>
-         
-    
-</p>
-
+      </p>
 {% endblock main %}
+
+{% block extra_scripts %}
+<script>
+const terminals = document.querySelectorAll('.terminal');
+terminals.forEach(function (terminal) {
+  const input = terminal.querySelector('input');
+  terminal.addEventListener('click', function (event) {
+    input.focus();
+  }, false);
+});
+</script>
+{% endblock extra_scripts %}

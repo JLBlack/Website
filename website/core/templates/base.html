@@ -122,9 +122,8 @@
                 transition: opacity 300ms ease-in, color 300ms ease-i;
             }
         </style>
-        {% endblock styles %}
-
         {% block extra_styles %}{% endblock extra_styles %}
+        {% endblock styles %}
 
         {% block extra_head %}
         {% endblock extra_head %}
@@ -155,6 +154,7 @@
             <a href="/china/" class='magic-button china'>🥡</a>
         </section>
 
+        {% block scripts %}
         <script>
             const button = document.getElementsByClassName('donut');
             const initialBackgroundImage = document.body.style.backgroundImage;
@@ -169,5 +169,7 @@
                 }, false);
             });
         </script>
+        {% block extra_scripts %}{% endblock extra_scripts %}
+        {% endblock scripts %}
     </body>
 </html>
